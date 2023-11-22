@@ -29,7 +29,7 @@ const Operation = ({ userId }) => {
         // envoi vers la base de données
         try {
           axios
-            .post("https://gamifyurlife.osc-fr1.scalingo.io/budgets", {
+            .post("https://gul-backend-ab33b38ec77f.herokuapp.com/budgets", {
               userId: userId,
               depenses: categorie === "depenses" ? dataToNum : "",
               revenus: categorie === "revenus" ? dataToNum : "",
@@ -37,7 +37,7 @@ const Operation = ({ userId }) => {
             })
             .then(() => {
               axios
-                .get("https://gamifyurlife.osc-fr1.scalingo.io/budgets")
+                .get("https://gul-backend-ab33b38ec77f.herokuapp.com/budgets")
                 .then((res) => dispatch(getDatas(res.data)));
             });
         } catch (e) {

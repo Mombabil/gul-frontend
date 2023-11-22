@@ -26,7 +26,7 @@ const Login = () => {
 
     try {
       axios
-        .post("https://gamifyurlife.osc-fr1.scalingo.io/users", {
+        .post("https://gul-backend-ab33b38ec77f.herokuapp.com/users", {
           email: newEmail,
           password: newPassword,
           name: name,
@@ -57,7 +57,7 @@ const Login = () => {
 
     try {
       axios
-        .post("https://gamifyurlife.osc-fr1.scalingo.io/users/login", {
+        .post("https://gul-backend-ab33b38ec77f.herokuapp.com/users/login", {
           email,
           password,
         })

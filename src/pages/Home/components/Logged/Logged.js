@@ -19,13 +19,13 @@ const Logged = () => {
         headers: { Authorization: `Bearer ${token}` },
       };
       axios
-        .get("https://gamifyurlife.osc-fr1.scalingo.io/users/me", config)
+        .get("https://gul-backend-ab33b38ec77f.herokuapp.com/users/me", config)
         .then((res) => {
           setUser(res.data);
         })
         .then(() => {
           axios
-            .get("https://gamifyurlife.osc-fr1.scalingo.io/budgets")
+            .get("https://gul-backend-ab33b38ec77f.herokuapp.com/budgets")
             .then((res) => setDatas(res.data));
         });
     }
@@ -38,7 +38,7 @@ const Logged = () => {
     };
     axios
       .post(
-        "https://gamifyurlife.osc-fr1.scalingo.io/users/logout/all",
+        "https://gul-backend-ab33b38ec77f.herokuapp.com/users/logout/all",
         [],
         config
       )
