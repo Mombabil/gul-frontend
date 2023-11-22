@@ -19,13 +19,13 @@ const Logged = () => {
         headers: { Authorization: `Bearer ${token}` },
       };
       axios
-        .get("https://gamifyurlife.osc-fr1.scalingo.io/api/users/me", config)
+        .get("https://gamifyurlife.osc-fr1.scalingo.io/users/me", config)
         .then((res) => {
           setUser(res.data);
         })
         .then(() => {
           axios
-            .get("https://gamifyurlife.osc-fr1.scalingo.io/api/budgets")
+            .get("https://gamifyurlife.osc-fr1.scalingo.io/budgets")
             .then((res) => setDatas(res.data));
         });
     }
@@ -38,7 +38,7 @@ const Logged = () => {
     };
     axios
       .post(
-        "https://gamifyurlife.osc-fr1.scalingo.io/api/users/logout/all",
+        "https://gamifyurlife.osc-fr1.scalingo.io/users/logout/all",
         [],
         config
       )

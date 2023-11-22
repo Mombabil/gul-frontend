@@ -26,7 +26,7 @@ const Login = () => {
 
     try {
       axios
-        .post("https://gamifyurlife.osc-fr1.scalingo.io/api/users/", {
+        .post("https://gamifyurlife.osc-fr1.scalingo.io/users/", {
           email: newEmail,
           password: newPassword,
           name: name,
@@ -57,7 +57,7 @@ const Login = () => {
 
     try {
       axios
-        .post("https://gamifyurlife.osc-fr1.scalingo.io//api/users/login", {
+        .post("https://gamifyurlife.osc-fr1.scalingo.io/users/login", {
           email,
           password,
         })
