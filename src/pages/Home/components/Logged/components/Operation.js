@@ -29,7 +29,7 @@ const Operation = ({ userId }) => {
         // envoi vers la base de données
         try {
           axios
-            .post("https://gamifyurlife.osc-fr1.scalingo.io/api/budgets", {
+            .post("https://gamifyurlife.osc-fr1.scalingo.io/budgets", {
               userId: userId,
               depenses: categorie === "depenses" ? dataToNum : "",
               revenus: categorie === "revenus" ? dataToNum : "",
@@ -37,7 +37,7 @@ const Operation = ({ userId }) => {
             })
             .then(() => {
               axios
-                .get("https://gamifyurlife.osc-fr1.scalingo.io/api/budgets")
+                .get("https://gamifyurlife.osc-fr1.scalingo.io/budgets")
                 .then((res) => dispatch(getDatas(res.data)));
             });
         } catch (e) {
