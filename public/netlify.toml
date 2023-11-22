@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "https://gamifyurlife.netlify.app/"
   status = 200
 
 [[headers]]
